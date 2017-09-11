@@ -1,5 +1,7 @@
 "use strict"
 
+"use strict"
+
 var moduleCalculation = (function () {
    var arr = [];
    var Perimeter = 0;
@@ -23,12 +25,10 @@ var moduleCalculation = (function () {
          }
       }
       return arr;
+   
    return {
-      Perimeter: function () {
-         return arr[0];
-      },
-      Square: function () {
-         return arr[0];
+      function () {
+         return arr;
       }
    }
 }());
