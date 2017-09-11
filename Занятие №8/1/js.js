@@ -10,10 +10,10 @@ function GeometricFigure(centreX, centreY) {
    this.getCentreY = function () {
       return _centreY;
    };
-   this.setCentreX = function (x) {
+   this.setCentreX = function (centreX) {
       _centreX = centreX;
    };
-   this.setCentreY = function (y) {
+   this.setCentreY = function (centreY) {
       _centreY = centreY;
    };
 }
@@ -38,10 +38,14 @@ function GeometricFigureCircle(radius, centreX, centreY) {
 
 var figure = new GeometricFigure(25, 35);
 console.log(figure.getCentreX()); // 25
+figure.setCentreX(40); // 40
+console.log(figure.getCentreX()); // 40
 console.log(figure.getCentreY()); // 35
 
 var figureSquare = new GeometricFigureSquare(10, 25, 35);
 console.log(figureSquare.info()); 
 
 var figureCircle = new GeometricFigureCircle(20, 85, 95);
+console.log(figureCircle.getCentreX());
+console.log(figureCircle.getCentreY());
 console.log(figureCircle.info()); 

@@ -1,6 +1,6 @@
 "use strict"
 
-function createTv() {
+function Tv() {
    this.currentChannel = 0;
    
    this.nextChannel = function () {
@@ -16,30 +16,30 @@ function createTv() {
    };   
 }
 
-function createPlayer() {
-   this.CurrentSong = 0;
-   this.IsPlaying = 0;
+function Player() {
+   this.currentSong = 0;
+   this.isPlaying = 0;
    
-   this.PlaySong = function () {
-      this.IsPlaying=1;
+   this.playSong = function () {
+      this.isPlaying=1;
    };
    
-   this.StopSong = function () {
-      this.IsPlaying=0;
+   this.stopSong = function () {
+      this.isPlaying=0;
    };   
    
    this.nextSong = function () {
-     this.CurrentSong++;
+     this.currentSong++;
    };
    
    this.previousSong = function () {
-      this.CurrentSong--;
+      this.currentSong--;
    };
    
    this.setSong = function (number) {
-      this.CurrentSong=number;
+      this.currentSong=number;
    };   
 }
 
-var tv = new createTv();
-var player = new createPlayer();
+var tv = new Tv();
+var player = new Player();
