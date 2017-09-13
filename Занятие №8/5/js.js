@@ -14,7 +14,6 @@ Square.prototype.perimeter = function () {
 Square.prototype.side = function (side) {
    if (typeof(side) === "number") {
       this._side = side;
-      return this._side;
    } else {
       return this._side;
    }
