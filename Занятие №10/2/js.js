@@ -9,8 +9,8 @@ arr.sortDesc();
 console.log(arr); // [5, 4, 3, 2, 1]*/
 
 Array.prototype.sortDesc =  function() {
-   arr = arr.sort();
-   return arr.reverse()
+   this.sort();
+   this.reverse();
 };
 
 var arr = [5, 1, 4, 2, 3];
