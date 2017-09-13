@@ -10,34 +10,51 @@ var array = [1, 8, 5, 9, 3, 7, 4];
 
 function sumSliceArray(array, first, second) {
    try { 
-      if (typeof(array[first]) !== "number" 
-         ||  typeof(array[second]) !== "number" 
-         ||  first < 0 
-         ||  second < 0 
-         ||  first > array.length 
-         ||  second > array.length) {  
-            array.err();  
+      if (typeof(array[first]) !== "number") {
+         throw new Error("Первый элемент не является числом");
       }
-      return array[first] + array[second];
+           
+      if (typeof(array[second]) !== "number") {
+         throw new Error("Ощибка!!! Второй элемент не является числом");
+      }
+     
+      if (first < 0) {
+            throw new Error("Ощибка!!! Первый элемент меньше нуля");
+      }
       
+      if (second < 0) {
+            throw new Error("Ощибка!!!Второй элемент меньше нуля");
+      }
+      
+      if (first > array.length) {
+            throw new Error("Ощибка!!! Первый элемент больше длинны массива");
+      }
+      
+      if (second > array.length) {
+            throw new Error("Ощибка!!! Второй элемент больше длинны массива");
+      }
+      
+   return array[first] + array[second]; 
    } catch (error) {
-      return "Обработка исключения";
-   }   
+      return error.message
+   }
 }
 
-//console.log(sumSliceArray(array, 2, 5));
-
 function processingArray (array, first, second) {
-   if (typeof(array[first]) !== "number" 
-      ||  typeof(array[second]) !== "number" 
-      ||  first < 0 
-      ||  second < 0 
-      ||  first > array.length 
-      ||  second > array.length) {  
-         return "Проверка не пройдена";
-      } else {
-         return sumSliceArray(array, first, second);
+   if (typeof(array[first]) === "number") {
+      if (typeof(array[second]) === "number")  {
+         if (first > 0) {
+            if (second > 0) {
+               if (first < array.length) {
+                  if (second < array.length) {
+                     return sumSliceArray(array, first, second);
+                  }
+               }
+            }
+         }  
+      }   
    }
+return "Проверка не пройдена";   
 }
 
 console.log(processingArray(array, 2, 5));
