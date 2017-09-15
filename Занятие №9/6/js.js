@@ -40,21 +40,17 @@ function sumSliceArray(array, first, second) {
    }
 }
 
-function processingArray (array, first, second) {
-   if (typeof(array[first]) === "number") {
-      if (typeof(array[second]) === "number")  {
-         if (first > 0) {
-            if (second > 0) {
-               if (first < array.length) {
-                  if (second < array.length) {
-                     return sumSliceArray(array, first, second);
-                  }
-               }
-            }
-         }  
-      }   
-   }
-return "Проверка не пройдена";   
+function processingArray(array, first, second) {
+   if (typeof(array[first]) === "number" 
+      ||  typeof(array[second]) === "number" 
+      ||  first >= 0 
+      ||  second >= 0 
+      ||  first < array.length 
+      ||  second < array.length) {  
+      return sumSliceArray(array, first, second);
+    } else {
+    return "Проверка не пройдена";        
+    }  
 }
 
 console.log(processingArray(array, 2, 5));
