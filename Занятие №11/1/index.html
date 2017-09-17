@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Навигация в DOM</title>
+      <meta charset="utf-8" />
+   </head>
+   <body>
+      <div>Пользователи:</div>
+      <ul>
+         <li>Маша</li>
+         <li>Вовочка</li>
+      </ul>
+      <!-- комментарий -->
+      <script>
+         //1. Получите элемент <head> в переменную при помощи children;
+         var HeadElements = document.head.children;
+         console.dir(HeadElements);
+         //2. Получите элемент <ul> в переменную
+         var ulElements = document.body.children[1];
+         console.dir(ulElements);
+         //3. Получите второй элемент <li> в переменную;
+         var liSekondElements = ulElements.children[1];
+         console.dir(liSekondElements);
+      </script>
+   </body>
+</html>
