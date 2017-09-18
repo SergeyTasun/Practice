@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Свойства узлов</title>
+      <meta charset="utf-8" />
+   </head>
+   <body>
+      Текстовый узел №1<br />
+      Текстовый узел №2
+      <script>
+      
+         //1. Выведите на экран содержимое первого текстового узла;
+         var bodyNodes = document.body;
+         console.dir(bodyNodes.firstChild.data);
+         //2. Выведите на экран содержимое последнего текстового узла.
+         console.dir(bodyNodes.childNodes[2].data)
+       
+      </script>
+   </body>
+</html>

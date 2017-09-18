@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Атрибуты узлов</title>
+      <meta charset="utf-8" />
+   </head>
+   <body>
+      <div data-widget-name="menu">Выберите жанр</div>
+      <script>
+      
+         // 1. Получите элемент <div> в переменную;
+         var divNodes = document.body.childNodes[1];
+         console.dir(divNodes);
+         
+         // 2. Получите значение атрибута data-widget-name в переменную;
+         var dataWidgetName = divNodes.getAttribute("data-widget-name");
+         console.dir(dataWidgetName);
+         
+      </script>
+   </body>
+</html>
