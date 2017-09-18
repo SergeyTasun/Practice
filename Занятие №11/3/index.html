@@ -13,18 +13,23 @@
          <button name="signIn">Войти</button>
       </form>
       <script>
+         
          //1. Получите форму по имени в переменную;
          var formElementsName = document.forms.authForm;  
-         console.dir(formElementsName);    
+         console.dir(formElementsName);
+         
          //2. Получите форму по номеру в переменную;
          var formElementsNumber = document.forms[0];  
          console.dir(formElementsNumber);
+         
          //3. Получите первый элемент <input> в переменную;
          var firstInput = formElementsName.elements[0];  
          console.dir(firstInput);
+         
          //4. Получите элемент <button> в переменную;
          var firstButton = formElementsName.elements[2];  
          console.dir(firstButton);
+         
       </script>
    </body>
 </html>
