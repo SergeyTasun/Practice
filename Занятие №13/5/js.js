@@ -6,7 +6,6 @@ let obj = {
    print: function () {
       // Ваш код
       return () => console.log(this.name); 
-
    }
 };
 function multiCaller(func, count) {
@@ -15,5 +14,3 @@ function multiCaller(func, count) {
    }
 }
 multiCaller(obj.print(), 3);  // "obj", 3 раза
-
-
