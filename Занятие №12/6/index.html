@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>События</title>
+      <meta charset="utf-8" />
+   </head>
+   <body>
+      <p id="color">Текст</p>
+      <button>Красный</button>
+      <button>Синий</button>
+      <button>Сброс</button>
+      <script>
+         // Ваш код
+         //Сделайте так, чтобы при клике на кнопки, изменялся цвет текста элемента с идентификатором "color". После нажатия на кнопку “Красный”: Цвет становился красным.  и т. д.
+               var elemText = document.getElementById("color");
+    
+               var elemButtonRed = document.getElementsByTagName("button")[0];
+               var elemButtonBlue = document.getElementsByTagName("button")[1];
+               var elemButtonReset = document.getElementsByTagName("button")[2];
+                  
+                  elemButtonRed.onclick = function () {
+                     elemText.style.color="Red";
+                  }
+                  
+                  elemButtonBlue.onclick = function () {
+                     elemText.style.color="Blue";
+                  } 
+                  
+                  elemButtonReset.onclick = function () {
+                     elemText.style.color = "";
+                  }  
+               
+      </script>
+   </body>
+</html>
